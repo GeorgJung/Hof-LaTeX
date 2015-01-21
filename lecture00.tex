@@ -1,0 +1,138 @@
+%+-----------------------------------------------------------------------+%
+\newcommand{\Number}{0}
+\newcommand{\Title}{Vorlesung}
+\newcommand{\ShortTitle}{Kurztitel}
+\newcommand{\Subtitle}{Thema}
+\newcommand{\Author}{Georg Jung}
+\newcommand{\Email}{$\langle$\href{mailto:georg.jung@iisys.de}{\nolinkurl{georg.jung@iisys.de}}$\rangle$}
+\newcommand{\ShortAuthor}{Jung}
+\newcommand{\Date}{21. Dezember 2012}
+\newcommand{\Institute}{\href{www.iisys.de}{\includegraphics[width=.3\linewidth]{iisys}}}
+\newcommand{\ShortInstitute}{iisys}
+%+-----------------------------------------------------------------------+%
+
+\usepackage{inputenx}
+\usepackage{CJKutf8}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{newtxtext}
+\usepackage[euler-digits,small]{eulervm}
+\usepackage{mathdots}
+\usepackage{german}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{syntax}
+\usepackage{figsize}
+\usepackage{relsize}
+\usepackage{colortbl}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{stmaryrd}
+
+\newcommand{\ie}{\emph{i.\,e.}}
+\newcommand{\eg}{\emph{e.\,g.}}
+\newcommand{\vs}{\emph{vs.}}
+\newcommand{\wrt}{\emph{wrt.}}
+\newcommand{\etc}{\emph{etc.}}
+
+\definecolor{Crimson}{RGB}{220,20,60}
+\definecolor{Sangria}{RGB}{146,0,10}
+\definecolor{Cyan4}{RGB}{0,144,144}
+\definecolor{Red2}{RGB}{208,0,0}
+\definecolor{Glaucous}{RGB}{96,130,182}
+\definecolor{MidnightBlue}{RGB}{25,25,112}
+\definecolor{Teal}{RGB}{0,128,128}
+\definecolor{Vermilion}{RGB}{227,66,52}
+\definecolor{Android}{RGB}{164,198,57}
+\definecolor{CadetBlue}{RGB}{95,198,160}
+\definecolor{Cadet}{RGB}{83,104,120}
+\definecolor{BattleshipGray}{RGB}{132,132,130}
+\definecolor{Coffee}{RGB}{111,78,55}
+\definecolor{InternationalOrange}{RGB}{186,22,12}
+\definecolor{SafetyOrange}{RGB}{232,118,0}
+
+\newcommand{\HyperrefColor}{Coffee}
+
+\hypersetup{pdftitle={\Title\ \Number},%
+  pdfauthor={\Author},%
+  pdfsubject={\Subtitle},%
+  pdfstartview=FitH,%
+  bookmarks=true,%
+  bookmarksopen=true,%
+  breaklinks=true,%
+  colorlinks=true,%
+  linkcolor=\HyperrefColor,anchorcolor=\HyperrefColor,%
+  citecolor=\HyperrefColor,filecolor=\HyperrefColor,%
+  menucolor=\HyperrefColor,pagecolor=\HyperrefColor,%
+  urlcolor=\HyperrefColor}
+
+\usetheme{iisys169}
+\setbeamertemplate{navigation symbols}{
+%  \insertslidenavigationsymbol
+  \insertframenavigationsymbol
+  \insertsubsectionnavigationsymbol
+  \insertsectionnavigationsymbol
+  \insertdocnavigationsymbol
+%  \insertbackfindforwardnavigationsymbol
+}
+%\logo{\includegraphics[width=40mm]{iisys}}
+
+% Importing svg files with text
+\newcommand{\executeiffilenewer}[3]{%
+ \ifnum\pdfstrcmp{\pdffilemoddate{#1}}%
+ {\pdffilemoddate{#2}}>0%
+ {\immediate\write18{#3}}\fi%
+}
+\newcommand{\includesvg}[1]{%
+ \executeiffilenewer{#1.svg}{#1.pdf}%
+ {inkscape -z -C --file=#1.svg --export-pdf=#1.pdf --export-latex}%
+ \input{#1.pdf_tex}%
+}
+
+%----------------------------------------------------------------------%
+
+\title[\ShortTitle]{\Title}
+\subtitle{\Number. \Subtitle}
+\author[\ShortAuthor]{\Author\ \Email}
+\institute[\ShortInstitute]{\Institute}
+\date{\Date}
+
+%----------------------------------------------------------------------%
+\begin{document}
+
+\begin{center}
+  {\LARGE \Title}\\[5mm]
+  {\Large  \Number. \Subtitle}\\[20mm]
+  {\large \Author\ \Email}\\[2mm]
+  \Institute\\[10mm]
+  \Date
+\end{center}
+
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Themen}
+  \tableofcontents
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "lecture00.beamer.tex"
+%%% End:
