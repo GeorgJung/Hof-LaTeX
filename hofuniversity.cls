@@ -518,11 +518,11 @@
           (Seite~\pageref{formulapage}) und kann der Einfachheit
           halber abgetrennt werden. Die Formelsammlung muss nicht mit
           abgegeben werden.} }{}%
-      \textbf{\en{Note that if one or more pages are missing, you will
-        lose their points. Thus, you must check whether your exam
-        booklet is complete.}\de{Sollten eine oider mehrere Seiten
-        fehlen, verlieren Sie gegebenenfalls die Punkte. Prüfen Sie
-        daher, ob das Heft vollständig ist.}}
+      % \textbf{\en{Note that if one or more pages are missing, you will
+      %   lose their points. Thus, you must check whether your exam
+      %   booklet is complete.}\de{Sollten eine oider mehrere Seiten
+      %   fehlen, verlieren Sie gegebenenfalls die Punkte. Prüfen Sie
+      %   daher, ob das Heft vollständig ist.}}
   \item \en{Write your solutions into the space
       provided.}\de{Schreiben Sie Ihre Lösungen in den dafür
       vorgesehenen Platz.} \en{If you need more space, write on the
